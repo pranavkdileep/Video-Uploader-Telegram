@@ -9,7 +9,8 @@ COPY . /app
 
 # Install any needed packages specified in requirements.txt
 RUN pip install --trusted-host pypi.python.org -r requirements.txt
-
+RUN pip install gunicorn
+RUN apt update && apt install ffmpeg -y
 # Expose port 7860 for the Flask app
 EXPOSE 7860
 
