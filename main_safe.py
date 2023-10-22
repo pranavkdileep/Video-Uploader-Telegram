@@ -13,7 +13,7 @@ db_config = {
     "database": "thundkad_pv"
 }
 
-TOKEN = '6425191207:AAGO9zzmgF3FYrIKE8-TibgTcPqMr_u9Hck'
+TOKEN = '6148411113:AAEb7tXax19l7dQQ5Hx67aJbGf636__c5GU'
 bot = telebot.TeleBot(TOKEN)
 
 def upload(file_name):
