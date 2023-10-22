@@ -15,4 +15,4 @@ RUN apt update && apt install ffmpeg -y
 EXPOSE 7860
 
 # Run app.py when the container launches
-CMD ["gunicorn", "-c", "gunicorn_config.py", "main_safe_flask.py:app"]
+CMD ["gunicorn", "-c", "gunicorn_config.py", "main_safe_flask:app"]
