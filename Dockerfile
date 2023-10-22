@@ -14,5 +14,7 @@ RUN apt update && apt install ffmpeg -y
 # Expose port 7860 for the Flask app
 EXPOSE 7860
 
-# Run app.py when the container launches
-CMD ["gunicorn", "-c", "gunicorn_config.py", "main_safe_flask:app"]
+
+RUN chmod +x /app/start.sh
+CMD ["/app/start.sh"]
+
