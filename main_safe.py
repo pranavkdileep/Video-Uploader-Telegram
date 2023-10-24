@@ -99,9 +99,7 @@ def handle_video(message):
 
 def handle_setTumb(message, video_post_id):
     try:
-        # Get the largest size photo
-        connection = mysql.connector.connect(**db_config)
-        cursor = connection.cursor()
+        # g
         largest_photo = max(message.photo, key=lambda p: p.width * p.height)
         
         file_info = bot.get_file(largest_photo.file_id)
