@@ -118,8 +118,6 @@ def handle_setTumb(message, video_post_id):
         cid = res_json['value']['cid']
         
         file_url = f"https://{cid}.ipfs.dweb.link/{file_name}"
-        cursor.execute("UPDATE qa_posts SET content = %s WHERE qa_posts.postid = %s", (file_url, video_post_id))
-        connection.commit()
         bot.reply_to(message, "Thubnail Set Success" + file_url)
     except Exception as e:
          print(f"An error occurred while setting the thumbnail: {e}")
