@@ -7,7 +7,7 @@ import json
 import mysql.connector
 
 db_config = {
-    "host": "13.56.151.29",
+    "host": "thundkada.com",
     "user": "thun_tk",
     "password": "Pranavkd44#",
     "database": "thun_tk"
