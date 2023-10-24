@@ -7,10 +7,10 @@ import json
 import mysql.connector
 
 db_config = {
-    "host": "139.144.36.136",
-    "user": "thundkad_pv",
+    "host": "13.56.151.29",
+    "user": "thun_tk",
     "password": "Pranavkd44#",
-    "database": "thundkad_pv"
+    "database": "thun_tk"
 }
 
 TOKEN = '6148411113:AAEb7tXax19l7dQQ5Hx67aJbGf636__c5GU'
