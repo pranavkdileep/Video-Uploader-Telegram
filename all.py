@@ -6,7 +6,7 @@ import requests
 import json
 
 # Create a bot object with the bot token
-bot = telebot.TeleBot("6148411113:AAEb7tXax19l7dQQ5Hx67aJbGf636__c5GU")
+bot = telebot.TeleBot("6660892564:AAEy5EZoe_z3KjHcoBXT3m-h4cTAGiyEqWc")
 
 def upload(file_name):
     url = 'https://api.nft.storage/upload'
@@ -53,11 +53,15 @@ def handle_file(message):
     with open(new_file_name, "wb") as f:
         f.write(downloaded_file)
     # Send a confirmation message to the user
+    bot.reply_to(message, "File saved as " + new_file_name) 
+    bot.reply_to(message, "Uploading to IPFS...")
     res = upload(new_file_name)
     res_json = json.loads(res)
     cid = res_json['value']['cid']
-    file_url = f"https://{cid}.ipfs.dweb.link/{new_file_name}"
+    file_url = f"https://{cid}.ipfs.w3s.link/{new_file_name}"
     bot.reply_to(message, "Your file Link is " + file_url)
+    # Delete the file from the local storage
+    os.remove(new_file_name)
 
 # Start polling for updates from the Telegram server
 bot.polling()
