@@ -6,7 +6,7 @@ import requests
 import json
 
 # Create a bot object with the bot token
-bot = telebot.TeleBot("6660892564:AAEy5EZoe_z3KjHcoBXT3m-h4cTAGiyEqWc")
+bot = telebot.TeleBot("6781220318:AAENfg4idKOfWvnGHFor8_Des1kZIkAuPMs")
 
 def upload(file_name):
     url = 'https://api.nft.storage/upload'
